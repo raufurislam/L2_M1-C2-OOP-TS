@@ -1,17 +1,5 @@
-class Product {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
+import { Product } from "./models/Product";
 
-  constructor(id: number, name: string, price: number, quantity: number) {
-    this.id = id;
-    this.name = name;
-    this.price = price;
-    this.quantity = quantity;
-  }
+const sampleProduct = new Product(1, "demo product", 30, 50);
 
-  getDetails() {
-    return `Product ${this.name} -$${this.price} stock: ${this.quantity}`;
-  }
-}
+console.log(sampleProduct.getDetails());
