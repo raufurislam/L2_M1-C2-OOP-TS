@@ -18,6 +18,14 @@ export class Product {
   getStockValue() {
     return this.price * this.quantity;
   }
+  sell(unit: number): string {
+    if (unit > this.quantity) {
+      return "Vai product to ses";
+    } else {
+      this.quantity -= unit;
+    }
+    return `${this.name} ${unit} units have been sold`;
+  }
 }
 
 // dry - do not repeat yourself
